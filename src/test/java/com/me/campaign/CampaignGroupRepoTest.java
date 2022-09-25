@@ -16,14 +16,17 @@ import com.me.campaign.repository.CampaignGroupRepo;
 @AutoConfigureTestDatabase(replace = Replace.NONE) // if we want to use real database to test, we need this annotation
 @Rollback(false)
 public class CampaignGroupRepoTest {
-	
+
 	@Autowired
 	private CampaignGroupRepo repo;
-	
+
+
 	@Test
 	public void testCreateCampaignGroup() {
+
 		CampaignGroup savedCampaignGroup = repo.save(new CampaignGroup("First","This is First."));
 		assertThat(savedCampaignGroup.getId()).isGreaterThan(0);
+
 	}
-	
+
 }

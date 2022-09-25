@@ -10,8 +10,11 @@
 
 	<!-- NavBar -->
 
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
 		<a class="navbar-brand" href="#">Campaign Management System</a>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -35,14 +38,18 @@
 			</ul>
 
 		</div>
+
 	</nav>
+
 
 	<!-- NavBar -->
 
 
 	<!-- Campaign Group Table  -->
 
+
 	<div class="container text-center p-2">
+
 		<div>
 			<h1>Campaign Group List</h1>
 		</div>
@@ -50,7 +57,9 @@
 		<div class="container p-5">
 
 			<table class="table table-striped bg-dark text-white">
+
 				<caption>List of Campaign Groups</caption>
+
 				<thead>
 					<tr>
 						<th scope="col">ID</th>
@@ -59,6 +68,7 @@
 						<th scope="col">Action</th>
 					</tr>
 				</thead>
+
 				<tbody>
 
 					<th:block th:each="cg: ${campaignGroupsList}">
@@ -78,21 +88,30 @@
 					</th:block>
 
 				</tbody>
+
 			</table>
 
 		</div>
 
-		<!-- Campaign Group Table -->
-
 	</div>
 
 
+	<!-- Campaign Group Table -->
+
+
 	<!-- Add New Group Button -->
+
+
 	<div class="container text-center">
+
 		<a class="btn btn-sm btn-primary text-white"
 			th:href="@{/campaignGroups/add}">Add New Group</a>
+
 	</div>
+
+
 	<!-- Add New Group Button -->
+
 
 </body>
 </html>

@@ -17,18 +17,19 @@ public class Campaign {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	@Column(length = 50, nullable = false)
 	private String name;
-	
+
 	private String description;
 	private String startDate;
 	private String endDate;
-	
+
 	@ManyToOne()
 	@JoinColumn(name = "cg_id")
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private CampaignGroup campaignGroup; // this is referenced in campaign form dropdown
+
 
 	@Override
 	public String toString() {
@@ -83,5 +84,5 @@ public class Campaign {
 	public void setCampaignGroup(CampaignGroup campaignGroup) {
 		this.campaignGroup = campaignGroup;
 	}
-	
+
 }

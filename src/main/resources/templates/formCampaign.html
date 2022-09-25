@@ -3,14 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Add Campaign</title>
-<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
 </head>
 <body>
 
-<!-- NavBar -->
+	<!-- NavBar -->
+
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
 		<a class="navbar-brand" href="#">Campaign Management System</a>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -19,6 +23,7 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
 			<ul class="navbar-nav mr-auto p-2">
 
 				<li class="nav-item active"><a class="nav-link" th:href="@{/}">Home
@@ -34,70 +39,75 @@
 			</ul>
 
 		</div>
+
 	</nav>
+
 
 	<!-- NavBar -->
 
 
-
-<div class = "container text-center p-4">
-	<div><h1>Add a Campaign</h1></div>
-	
 	<!-- Form -->
-	
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 offset-md-3">
-				<div class="card">
-					<div class="card-body">
 
-						<form th:action="@{/campaign/save}" th:object="${campaign}" method="post">
-	
-							<div class="form-group">
-								<label>Enter Campaign Name</label> <input type="text"
-									th:field = "*{name}" class="form-control" required>
-							</div>
 
-							<div class="form-group">
-								<label>Enter Description</label> <input type="text"
-									th:field = "*{description}" class="form-control" name="description" required>
-							</div>
-							
-							<div class="form-group">
-								<label>Enter Start Date</label> <input type="text"
-									th:field = "*{startDate}" class="form-control" required>
-							</div>
-							
-							<div class="form-group">
-								<label>Enter End Date</label> <input type="text"
-									th:field = "*{endDate}" class="form-control" required>
-							</div>
-							
-							<div class="form-group">
-								<label>Select Campaign Group</label> 
-								<select th:field = "*{campaignGroup}" class="form-control" required>
-									<th:block th:each="cg: ${listCampaignGroup}">
-										<option th:text="${cg.name}" th:value="${cg.id}"/>	
-									</th:block>
-								</select>
-							</div>
-							
-							
+	<div class="container text-center p-4">
 
-							<button class="btn btn-primary btn-block">Submit</button>
-						
-						</form>
+		<div>
+			<h1>Add a Campaign</h1>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card">
+						<div class="card-body">
+
+							<form th:action="@{/campaign/save}" th:object="${campaign}"
+								method="post">
+
+								<div class="form-group">
+									<label>Enter Campaign Name</label> <input type="text"
+										th:field="*{name}" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label>Enter Description</label> <input type="text"
+										th:field="*{description}" class="form-control"
+										name="description" required>
+								</div>
+
+								<div class="form-group">
+									<label>Enter Start Date</label> <input type="text"
+										th:field="*{startDate}" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label>Enter End Date</label> <input type="text"
+										th:field="*{endDate}" class="form-control" required>
+								</div>
+
+								<div class="form-group">
+									<label>Select Campaign Group</label> <select
+										th:field="*{campaignGroup}" class="form-control" required>
+										<th:block th:each="cg: ${listCampaignGroup}">
+											<option th:text="${cg.name}" th:value="${cg.id}" />
+										</th:block>
+									</select>
+								</div>
+
+								<button class="btn btn-primary btn-block">Submit</button>
+
+							</form>
+
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+
 	<!-- Form -->
-	
-	
-	
-</div>
+
 
 </body>
 </html>

@@ -7,6 +7,7 @@ Campaign Management System has been developed as a Take-Home Assignment.
 - [Language and Tools](#language-and-tools)
 - [Description](#description)
 - [Demonstration](#demonstration)
+- [Acknowledements](#acknowledgements)
 
 
 ## Language and Tools
@@ -26,3 +27,8 @@ Campaign Management System has been developed as a Take-Home Assignment.
 ## Demonstration
 
 [![Campaign-Management-System](https://img.youtube.com/vi/BjQxuRHH-Bc/0.jpg)](https://youtu.be/BjQxuRHH-Bc)
+
+## Acknowledgements
+
+- <a href="https://youtu.be/s4jh8IVtTvo" target="_blank">Be Coder</a>
+- <a href="https://youtu.be/ctwRpskAeIU" target="_blank">Code Java</a>

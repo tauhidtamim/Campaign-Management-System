@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.me.campaign.entity.CampaignGroup;
 
-public interface CampaignGroupRepo extends JpaRepository<CampaignGroup, Integer> {
+public interface CampaignGroupRepo extends JpaRepository<CampaignGroup, Integer> { // table, type of PK
 
 }

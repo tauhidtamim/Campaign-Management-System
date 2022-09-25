@@ -18,36 +18,41 @@ public class CampaignController {
 
 	@Autowired
 	private CampaignRepo campaignRepo;
-	
+
 	@Autowired
 	private CampaignGroupRepo campaignGroupRepo;
-	
+
 	@GetMapping("/campaign")
 	public String listCampaign(Model model) {
+
 		List<Campaign> campaignList = campaignRepo.findAll();
 		model.addAttribute("campaignList", campaignList); // use this in html
-		
+
 		return "listCampaign"; // invoke this html
+
 	}
-	
+
+
 	@GetMapping("/campaign/add")
 	public String showCampaignForm(Model model) {
-		
+
 		List<CampaignGroup> listCampaignGroup = campaignGroupRepo.findAll();
-		
+
 		model.addAttribute("campaign", new Campaign()); // this is passed to th:action
 		model.addAttribute("listCampaignGroup", listCampaignGroup); // this is referenced in dropdown
-		
+
 		return "formCampaign"; // invoke this html
+
 	}
-	
+
+
 	@PostMapping("/campaign/save")
 	public String saveCampaign(Campaign campaign) {
+
 		campaignRepo.save(campaign);
-		
 		return "redirect:/campaign"; // redirect to the listCampaign html page
+
 	}
-	
-	
-	
+
+
 }
