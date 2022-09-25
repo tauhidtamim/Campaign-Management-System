@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Campaign Management System</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+	<!-- NavBar -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Campaign Management System</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto p-2">
+
+				<li class="nav-item active"><a class="nav-link" th:href="@{/}">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+
+				<li class="nav-item active"><a class="nav-link" th:href="@{/campaignGroups}">
+				Campaign Groups</a></li>
+						
+				<li class="nav-item active"><a class="nav-link" th:href="@{/campaign}">
+						Campaigns</a></li>
+
+			</ul>
+
+		</div>
+	</nav>
+
+	<!-- NavBar -->
+
+
+
+<div class = "container text-center p-5">
+	<div><h1>Welcome to Campaign Management System</h1></div>
+	
+	<!-- <div class="p-2">
+		<a class="h2" th:href = "@{/campaignGroups}">List of Campaign Groups</a>
+	</div> -->
+	
+	<div class="p-2">
+		<a class="h2" th:href = "@{/campaignGroups/add}">Add a Campaign Group</a>
+	</div>
+	
+	<!-- <div class="p-2">
+		<a class="h2" th:href = "@{/campaign}">List of Campaigns</a>
+	</div> -->
+	
+	<div class="p-2">
+		<a class="h2" th:href = "@{/campaign/add}">Add a Campaign</a>
+	</div>
+	
+</div>
+
+</body>
+</html>

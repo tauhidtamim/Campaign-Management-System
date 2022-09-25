@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Edit Campaign Group</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class = "container text-center">
+	<div><h1>Edit The Campaign Group</h1></div>
+	
+	<!-- Form -->
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+
+						<form th:action="@{/campaignGroups/update}" th:object="${cg}" method="post">
+							
+							<input type="hidden" th:value = "${cg.id}" name="id">
+							
+							<div class="form-group">
+								<label>Enter Campaign Group Name</label> <input type="text"
+									th:field = "*{name}" class="form-control" th:value="${cg.name}" required>
+							</div>
+
+							<div class="form-group">
+								<label>Enter Description</label> <input type="text"
+									th:field = "*{description}" class="form-control" th:value="${cg.description}" required>
+							</div>
+
+							<button class="btn btn-primary btn-block">Submit</button>
+						
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Form -->
+	
+	
+	
+</div>
+
+</body>
+</html>

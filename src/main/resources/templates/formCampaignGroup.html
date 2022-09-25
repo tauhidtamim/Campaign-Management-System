@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Campaign Group</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+<!-- NavBar -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Campaign Management System</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto p-2">
+
+				<li class="nav-item active"><a class="nav-link" th:href="@{/}">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+
+				<li class="nav-item active"><a class="nav-link"
+					th:href="@{/campaignGroups}"> Campaign Groups</a></li>
+
+				<li class="nav-item active"><a class="nav-link"
+					th:href="@{/campaign}"> Campaigns</a></li>
+
+			</ul>
+
+		</div>
+	</nav>
+
+	<!-- NavBar -->
+
+
+	
+
+<div class = "container text-center p-4">
+	<div><h1>Add a Campaign Group</h1></div>
+	
+	<!-- Form -->
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+
+						<form th:action="@{/campaignGroups/save}" th:object="${campaignGroup}" method="post">
+	
+							<div class="form-group">
+								<label>Enter Campaign Group Name</label> <input type="text"
+									th:field = "*{name}" class="form-control" required>
+							</div>
+
+							<div class="form-group">
+								<label>Enter Description</label> <input type="text"
+									th:field = "*{description}" class="form-control" name="description" required>
+							</div>
+
+							<button class="btn btn-primary btn-block">Submit</button>
+						
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Form -->
+	
+</div>
+
+
+
+</body>
+</html>
